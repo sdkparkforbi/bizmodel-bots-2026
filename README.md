@@ -1,6 +1,6 @@
 # 🤖 2026 비즈니스모델개발 경진대회 — 16개 AI 봇
 
-![Thumbnail](thumbnail.svg)
+![Thumbnail](thumbnail.png)
 
 **데이터경영학과 & 경영학전공** | 16팀이 만든 AI 친구 봇 모음
 
