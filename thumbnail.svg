@@ -1,45 +1,58 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', Arial, sans-serif">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1a365d"/>
       <stop offset="100%" stop-color="#2d5a87"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#d4a574"/>
       <stop offset="100%" stop-color="#e8c896"/>
     </linearGradient>
   </defs>
 
+  <!-- Background -->
   <rect width="1200" height="630" fill="url(#bg)"/>
 
-  <text x="600" y="120" text-anchor="middle" font-size="32" fill="#d4a574" font-weight="300" letter-spacing="6">2026 BIZ MODEL BOT</text>
+  <!-- Decorative top accent -->
+  <rect x="0" y="0" width="1200" height="8" fill="url(#gold)"/>
 
-  <text x="600" y="200" text-anchor="middle" font-size="58" fill="#ffffff" font-weight="700">16개의 AI 친구 봇</text>
+  <!-- Subtitle -->
+  <text x="600" y="100" text-anchor="middle" font-size="22" fill="#d4a574" font-weight="300" letter-spacing="8">2026 BIZ MODEL BOT</text>
 
-  <line x1="450" y1="240" x2="750" y2="240" stroke="url(#accent)" stroke-width="2"/>
+  <!-- Main title -->
+  <text x="600" y="180" text-anchor="middle" font-size="64" fill="#ffffff" font-weight="700">16개의 AI 친구 봇</text>
 
-  <text x="600" y="285" text-anchor="middle" font-size="20" fill="#cccccc">비즈니스모델개발 경진대회 — 데이터경영학과 &amp; 경영학전공</text>
+  <!-- Divider -->
+  <line x1="500" y1="220" x2="700" y2="220" stroke="#d4a574" stroke-width="2"/>
 
-  <g font-size="44" text-anchor="middle">
-    <text x="200" y="400" fill="#ffffff">🍚</text>
-    <text x="280" y="400" fill="#ffffff">🚕</text>
-    <text x="360" y="400" fill="#ffffff">📊</text>
-    <text x="440" y="400" fill="#ffffff">⚠️</text>
-    <text x="520" y="400" fill="#ffffff">⛵</text>
-    <text x="600" y="400" fill="#ffffff">Δ</text>
-    <text x="680" y="400" fill="#ffffff">🎾</text>
-    <text x="760" y="400" fill="#ffffff">🎴</text>
+  <!-- Description -->
+  <text x="600" y="265" text-anchor="middle" font-size="20" fill="#cccccc">데이터경영학과 &amp; 경영학전공</text>
 
-    <text x="240" y="480" fill="#ffffff">🛡️</text>
-    <text x="320" y="480" fill="#ffffff">💨</text>
-    <text x="400" y="480" fill="#ffffff">🌾</text>
-    <text x="480" y="480" fill="#ffffff">🎣</text>
-    <text x="560" y="480" fill="#ffffff">🌱</text>
-    <text x="640" y="480" fill="#ffffff">🏪</text>
-    <text x="720" y="480" fill="#ffffff">🤗</text>
-    <text x="800" y="480" fill="#ffffff">🌿</text>
+  <!-- 16 bot name circles - row 1 -->
+  <g font-size="20" font-weight="600" text-anchor="middle" fill="#1a365d">
+    <circle cx="195" cy="380" r="44" fill="#ffffff"/><text x="195" y="388">식구</text>
+    <circle cx="295" cy="380" r="44" fill="#ffffff"/><text x="295" y="388">택씨</text>
+    <circle cx="395" cy="380" r="44" fill="#ffffff"/><text x="395" y="388">분개해</text>
+    <circle cx="495" cy="380" r="44" fill="#ffffff"/><text x="495" y="388">잠깐만</text>
+    <circle cx="595" cy="380" r="44" fill="#ffffff"/><text x="595" y="388">장보고</text>
+    <circle cx="695" cy="380" r="44" fill="#ffffff"/><text x="695" y="388">그릭</text>
+    <circle cx="795" cy="380" r="44" fill="#ffffff"/><text x="795" y="388">나달</text>
+    <circle cx="895" cy="380" r="44" fill="#ffffff"/><text x="895" y="388">포커</text>
+
+    <!-- Row 2 -->
+    <circle cx="245" cy="485" r="44" fill="url(#gold)"/><text x="245" y="493" fill="#ffffff">지키미</text>
+    <circle cx="345" cy="485" r="44" fill="url(#gold)"/><text x="345" y="493" fill="#ffffff">숨돌이</text>
+    <circle cx="445" cy="485" r="44" fill="url(#gold)"/><text x="445" y="493" fill="#ffffff">곳간이</text>
+    <circle cx="545" cy="485" r="44" fill="url(#gold)"/><text x="545" y="493" fill="#ffffff">출조각</text>
+    <circle cx="645" cy="485" r="44" fill="url(#gold)"/><text x="645" y="493" fill="#ffffff">새로미</text>
+    <circle cx="745" cy="485" r="44" fill="url(#gold)"/><text x="745" y="493" fill="#ffffff">상도</text>
+    <circle cx="845" cy="485" r="44" fill="url(#gold)"/><text x="845" y="493" fill="#ffffff">토닥이</text>
+    <circle cx="945" cy="485" r="44" fill="url(#gold)"/><text x="945" y="493" fill="#ffffff">하루</text>
   </g>
 
-  <text x="600" y="570" text-anchor="middle" font-size="18" fill="#d4a574" font-style="italic">"AI 도구가 아니라, 옆자리에 있어주는 AI 친구"</text>
+  <!-- Tagline -->
+  <text x="600" y="585" text-anchor="middle" font-size="18" fill="#d4a574" font-style="italic">"AI 도구가 아니라, 옆자리에 있어주는 AI 친구"</text>
 
+  <!-- Decorative bottom accent -->
+  <rect x="0" y="622" width="1200" height="8" fill="url(#gold)"/>
 </svg>
