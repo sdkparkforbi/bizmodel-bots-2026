@@ -1,0 +1,110 @@
+name: Update Bot URL from Issue
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-url:
+    if: startsWith(github.event.issue.title, '[URL Update]')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Parse issue and update bots.json
+        id: parse
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const title = context.payload.issue.title;
+            const body = context.payload.issue.body || '';
+
+            // Parse team number from title: [URL Update] TEAM 01 - 식구
+            const teamMatch = title.match(/TEAM\s+(\d+)/i);
+            if (!teamMatch) {
+              core.setFailed('Cannot parse team number from title: ' + title);
+              return;
+            }
+            const teamNum = teamMatch[1].padStart(2, '0');
+
+            // Parse URL from body
+            const urlMatch = body.match(/webAppUrl:\s*(https?:\/\/[^\s]+)/i);
+            if (!urlMatch) {
+              core.setFailed('Cannot parse webAppUrl from body');
+              return;
+            }
+            let url = urlMatch[1].trim();
+            // Strip trailing punctuation
+            url = url.replace(/[.,;:]+$/, '');
+
+            // Update bots.json
+            const bots = JSON.parse(fs.readFileSync('bots.json', 'utf8'));
+            const bot = bots.find(b => b.teamNum === teamNum);
+            if (!bot) {
+              core.setFailed(`Team ${teamNum} not found in bots.json`);
+              return;
+            }
+            const oldUrl = bot.webAppUrl || '(none)';
+            bot.webAppUrl = url;
+            fs.writeFileSync('bots.json', JSON.stringify(bots, null, 2) + '\n');
+
+            core.setOutput('team', teamNum);
+            core.setOutput('botname', bot.botName);
+            core.setOutput('url', url);
+            core.setOutput('oldurl', oldUrl);
+
+            console.log(`Updated TEAM ${teamNum} (${bot.botName}): ${oldUrl} -> ${url}`);
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bots.json
+          git commit -m "Update webAppUrl for TEAM ${{ steps.parse.outputs.team }} (${{ steps.parse.outputs.botname }})"
+          git push
+
+      - name: Comment success and close issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ 등록 완료!\n\n` +
+                    `**TEAM ${{ steps.parse.outputs.team }} - ${{ steps.parse.outputs.botname }}** URL이 업데이트되었습니다.\n\n` +
+                    `🔗 새 URL: ${{ steps.parse.outputs.url }}\n\n` +
+                    `메인 페이지에서 확인하세요 (1~2분 후):\n` +
+                    `https://sdkparkforbi.github.io/bizmodel-bots-2026/`
+            });
+
+            await github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed',
+              state_reason: 'completed'
+            });
+
+      - name: Comment failure
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `❌ 자동 등록 실패\n\n` +
+                    `이슈 제목 또는 본문 형식을 확인해주세요:\n` +
+                    `- 제목: \`[URL Update] TEAM XX - 봇이름\`\n` +
+                    `- 본문에 \`webAppUrl: https://...\` 포함\n\n` +
+                    `메인 페이지에서 다시 등록해주세요:\n` +
+                    `https://sdkparkforbi.github.io/bizmodel-bots-2026/`
+            });
