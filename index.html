@@ -27,14 +27,55 @@
   .hero h1 { font-size: 2.5rem; margin-bottom: 12px; font-weight: 700; }
   .hero .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 8px; }
   .hero .tagline { font-size: 1rem; color: #d4a574; font-style: italic; margin-top: 16px; }
+  .hero .nav-btns { margin-top: 24px; }
+  .hero .nav-btns a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #d4a574;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 4px;
+  }
+  .hero .nav-btns a.secondary {
+    background: #2d5a87;
+    border: 2px solid #d4a574;
+  }
+  .hero .nav-btns a.tertiary {
+    background: rgba(255,255,255,0.1);
+    border: 2px solid rgba(255,255,255,0.3);
+  }
 
   /* Container */
   .container { max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
 
   /* Section title */
-  .section-title { text-align: center; margin-bottom: 50px; }
+  .section-title { text-align: center; margin-bottom: 30px; }
   .section-title h2 { font-size: 1.8rem; color: #1a365d; margin-bottom: 10px; }
   .section-title p { color: #666; font-size: 1rem; }
+
+  /* Submit info banner */
+  .submit-banner {
+    background: linear-gradient(90deg, #fff3cd 0%, #ffe8a1 100%);
+    border: 2px dashed #d4a574;
+    border-radius: 12px;
+    padding: 20px 28px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .submit-banner h3 { color: #8b5e2a; margin-bottom: 8px; font-size: 1.05rem; }
+  .submit-banner p { color: #555; font-size: 0.95rem; margin-bottom: 12px; }
+  .submit-banner a {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #1a365d;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
 
   /* Grid */
   .grid {
@@ -101,6 +142,35 @@
     color: #333;
     line-height: 1.7;
     flex-grow: 1;
+    margin-bottom: 16px;
+  }
+
+  /* Try button */
+  .try-btn {
+    display: block;
+    margin-top: auto;
+    padding: 12px;
+    text-align: center;
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .try-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(26, 54, 93, 0.3);
+  }
+  .try-btn.placeholder {
+    background: #f5f0e6;
+    color: #b8a07a;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+  .try-btn.placeholder::before {
+    content: "⏳ ";
   }
 
   /* Footer */
@@ -112,6 +182,14 @@
     font-size: 0.9rem;
   }
   footer p { margin-bottom: 8px; }
+  footer a { color: #d4a574; text-decoration: none; }
+
+  /* Loading */
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+  }
 
   /* Mobile */
   @media (max-width: 768px) {
@@ -129,196 +207,28 @@
   <p class="subtitle">데이터경영학과 &amp; 경영학전공 — 16팀의 AI 친구 봇</p>
   <p class="tagline">"AI 도구가 아니라, 옆자리에 있어주는 AI 친구"</p>
   <p style="margin-top:14px; font-size:0.85rem; opacity:0.75;">LiveAvatar 기반 3D 음성 대화 웹 앱 · React + Three.js + OpenAI</p>
-  <p style="margin-top:24px;">
-    <a href="proposals.html" style="display:inline-block; padding:12px 24px; background:#d4a574; color:white; border-radius:8px; text-decoration:none; font-weight:600; margin:4px;">📜 학생 제안서 요약</a>
-    <a href="tutorial.html" style="display:inline-block; padding:12px 24px; background:#2d5a87; color:white; border-radius:8px; text-decoration:none; font-weight:600; margin:4px; border:2px solid #d4a574;">🛠️ 나만의 봇 만들기 자습서</a>
-  </p>
+  <div class="nav-btns">
+    <a href="proposals.html">📜 학생 제안서 요약</a>
+    <a href="tutorial.html" class="secondary">🛠️ 나만의 봇 만들기 자습서</a>
+    <a href="submit.html" class="tertiary">📝 내 봇 URL 등록하기</a>
+  </div>
 </div>
 
 <div class="container">
+
+  <div class="submit-banner">
+    <h3>🎓 학생들에게</h3>
+    <p>본인 봇을 Vercel에 배포했나요? 카드에 "🔗 체험하기" 버튼을 켜려면 아래 가이드를 따라하세요.</p>
+    <a href="submit.html">📝 내 봇 URL 등록 방법 보기 →</a>
+  </div>
+
   <div class="section-title">
     <h2>16개의 봇, 16가지 영역</h2>
     <p>각 팀이 만든 비즈니스 모델 + 봇 이름 + MVP</p>
   </div>
 
-  <div class="grid">
-
-    <!-- 1 -->
-    <div class="card">
-      <div class="team-num">TEAM 01</div>
-      <div class="bot-emoji">🍚</div>
-      <div class="bot-name">식구</div>
-      <div class="team-name">1인 가구 식사 동반 봇</div>
-      <div class="members"><strong>김수연</strong> (헬스케어융합학부 3)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">웹 아바타 · 음식 사진 → AI 영양 분석 + 짧은 식사 대화 (혼밥 정서 케어)</div>
-    </div>
-
-    <!-- 2 -->
-    <div class="card">
-      <div class="team-num">TEAM 02</div>
-      <div class="bot-emoji">🚕</div>
-      <div class="bot-name">택씨</div>
-      <div class="team-name">세무 도우미 봇</div>
-      <div class="members"><strong>최문혁</strong> (데이터경영 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">카드내역 CSV 업로드 → LLM이 경비 자동 분류 + 예상 환급액 + 세법 Q&amp;A</div>
-    </div>
-
-    <!-- 3 -->
-    <div class="card">
-      <div class="team-num">TEAM 03</div>
-      <div class="bot-emoji">📊</div>
-      <div class="bot-name">분개해</div>
-      <div class="team-name">회계 학습 친구 봇</div>
-      <div class="members"><strong>21학번 F5</strong><br>신세용 · 길민제 · 김지한 · 임현우 · 허교정</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">회계원리 문제 입력 → 분개 풀이 + 단계별 설명 + 비슷한 문제 추천</div>
-    </div>
-
-    <!-- 4 -->
-    <div class="card">
-      <div class="team-num">TEAM 04</div>
-      <div class="bot-emoji">⚠️</div>
-      <div class="bot-name">잠깐만</div>
-      <div class="team-name">보이스피싱 방어 가족 봇</div>
-      <div class="members"><strong>김리원</strong> (경영학 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">의심 문자/통화 캡처 → AI 사기 패턴 판별 + 가족(자녀)에게 자동 알림</div>
-    </div>
-
-    <!-- 5 -->
-    <div class="card">
-      <div class="team-num">TEAM 05</div>
-      <div class="bot-emoji">⛵</div>
-      <div class="bot-name">장보고</div>
-      <div class="team-name">매일 종목 보고 친구 봇</div>
-      <div class="members"><strong>김영연</strong> (AI 의료데이터학과 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">관심 종목 등록 → 매일 아침 8시 자동 푸시 (3줄 뉴스 요약) + 매매 직전 코칭</div>
-    </div>
-
-    <!-- 6 -->
-    <div class="card">
-      <div class="team-num">TEAM 06</div>
-      <div class="bot-emoji">Δ</div>
-      <div class="bot-name">그릭</div>
-      <div class="team-name">옵션 학습 코치 봇</div>
-      <div class="members"><strong>에브리옵션</strong><br>김영민 · 김윤호 · 이서희 · 홍성혁</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">옵션 그리스 문자(델타/감마/세타) 개념 Q&amp;A + 의무교육 시험 기출 풀이</div>
-    </div>
-
-    <!-- 7 -->
-    <div class="card">
-      <div class="team-num">TEAM 07</div>
-      <div class="bot-emoji">🎾</div>
-      <div class="bot-name">나달</div>
-      <div class="team-name">1인 매치 자취 코치 봇</div>
-      <div class="members"><strong>박시영</strong> (미래융합대학 바이오식의약/경영 3)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">자취 첫주 필수템 큐레이션 + 구독 다이어트 + 주 1회 자취 꿀팁 푸시 ("오늘의 서브")</div>
-    </div>
-
-    <!-- 8 -->
-    <div class="card">
-      <div class="team-num">TEAM 08</div>
-      <div class="bot-emoji">🎴</div>
-      <div class="bot-name">핀포커 (포커)</div>
-      <div class="team-name">종목 호재/악재 잠금화면 봇</div>
-      <div class="members"><strong>핀포커스</strong><br>송승원 · 최진규 (데이터경영 3)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">보유 종목 5개 등록 → DART/뉴스 5분 모니터링 → 호재/악재 발생 시 1초 푸시</div>
-    </div>
-
-    <!-- 9 -->
-    <div class="card">
-      <div class="team-num">TEAM 09</div>
-      <div class="bot-emoji">🛡️</div>
-      <div class="bot-name">지키미</div>
-      <div class="team-name">청년 대출 + 신용 코칭 봇</div>
-      <div class="members"><strong>첫 단추</strong><br>강유위 · 장서현 · 백두산 · 신우용</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">청년 대출 정보 RAG 검색 + 신용 지키는 법 통계/연구 기반 코칭 (아바타)</div>
-    </div>
-
-    <!-- 10 -->
-    <div class="card">
-      <div class="team-num">TEAM 10</div>
-      <div class="bot-emoji">💨</div>
-      <div class="bot-name">숨돌이</div>
-      <div class="team-name">매매 직전 심리 친구 봇</div>
-      <div class="members"><strong>싹쓰리</strong><br>유혜린 · 황규민 · 김정민 (심리학)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">매매 직전 카톡 호출 → 감정 상태 묻기 → 24시간 챌린지 + 다음날 결과 알림</div>
-    </div>
-
-    <!-- 11 -->
-    <div class="card">
-      <div class="team-num">TEAM 11</div>
-      <div class="bot-emoji">🌾</div>
-      <div class="bot-name">곳간이</div>
-      <div class="team-name">현금 흐름 예측 + 환불 봇</div>
-      <div class="members"><strong>섭섭헌 진우</strong><br>임대섭 · 백진우 · 윤상헌 · 천우솔 · 김희서</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">카드내역 CSV → 월말 예상 잔액 + 위험 알림 (D-7) + 환불 정책 자동 진단</div>
-    </div>
-
-    <!-- 12 -->
-    <div class="card">
-      <div class="team-num">TEAM 12</div>
-      <div class="bot-emoji">🎣</div>
-      <div class="bot-name">출조각</div>
-      <div class="team-name">낚시 출조 확률 예측 봇</div>
-      <div class="members"><strong>이성채</strong> (데이터경영 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">위치 + 어종 입력 → 해양 데이터 분석 → "내일 갑오징어 출조각 87%" 예측</div>
-    </div>
-
-    <!-- 13 -->
-    <div class="card">
-      <div class="team-num">TEAM 13</div>
-      <div class="bot-emoji">🌱</div>
-      <div class="bot-name">새로미</div>
-      <div class="team-name">알고리즘 탈출 발견 봇</div>
-      <div class="members"><strong>임예영</strong> (데이터경영 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">최근 본 콘텐츠 3개 입력 → AI가 의외의 새 취미 추천 + 원데이 클래스 링크</div>
-    </div>
-
-    <!-- 14 -->
-    <div class="card">
-      <div class="team-num">TEAM 14</div>
-      <div class="bot-emoji">🏪</div>
-      <div class="bot-name">상도</div>
-      <div class="team-name">B2B 영업 파트너 봇</div>
-      <div class="members"><strong>지소윤</strong> (데이터경영 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">영업 회사명 입력 → DART/뉴스 자동 요약 + 콜드콜 스크립트 + 거절 반박 논리</div>
-    </div>
-
-    <!-- 15 -->
-    <div class="card">
-      <div class="team-num">TEAM 15</div>
-      <div class="bot-emoji">🤗</div>
-      <div class="bot-name">토닥이</div>
-      <div class="team-name">감정 일기 + 위로 봇</div>
-      <div class="members"><strong>권서영</strong> (심리학과 3)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">매일 세줄 일기 입력 → 공감 1줄 + 응원 1줄 + 내일 작은 미션 제안</div>
-    </div>
-
-    <!-- 16 -->
-    <div class="card">
-      <div class="team-num">TEAM 16</div>
-      <div class="bot-emoji">🌿</div>
-      <div class="bot-name">하루</div>
-      <div class="team-name">1인 가구 웰니스 코칭 봇</div>
-      <div class="members"><strong>김하은</strong> (미디어커뮤니케이션 4)</div>
-      <div class="mvp-label">MVP</div>
-      <div class="mvp">주 1회 균형 체크인 (재무/건강/관계/자기시간) → 부족 영역 진단 + 작은 실천 1개</div>
-    </div>
-
+  <div id="bot-grid" class="grid">
+    <div class="loading">봇 정보를 불러오는 중...</div>
   </div>
 </div>
 
@@ -329,10 +239,41 @@
     공통 스택 · React + Vite · LiveAvatar (LiveKit) · Three.js + VRM · OpenAI · RAG · Vercel
   </p>
   <p style="margin-top:14px; opacity:0.6;">
-    참고: <a href="https://github.com/sdkparkforbi/cha-interview-bot-liveavatar-my" style="color:#d4a574;">cha-interview-bot-liveavatar-my</a>
+    참고: <a href="https://github.com/sdkparkforbi/cha-interview-bot-liveavatar-my">cha-interview-bot-liveavatar-my</a>
   </p>
   <p style="margin-top:16px; opacity:0.6;">Made with 🤖 + ❤️</p>
 </footer>
+
+<script>
+fetch('bots.json?v=' + Date.now())
+  .then(r => r.json())
+  .then(bots => {
+    const grid = document.getElementById('bot-grid');
+    grid.innerHTML = '';
+    bots.forEach(bot => {
+      const card = document.createElement('div');
+      card.className = 'card';
+      const buttonHTML = bot.webAppUrl
+        ? `<a href="${bot.webAppUrl}" class="try-btn" target="_blank" rel="noopener">🔗 ${bot.botName} 체험하기 →</a>`
+        : `<div class="try-btn placeholder">준비 중</div>`;
+      card.innerHTML = `
+        <div class="team-num">TEAM ${bot.teamNum}</div>
+        <div class="bot-emoji">${bot.emoji}</div>
+        <div class="bot-name">${bot.botName}</div>
+        <div class="team-name">${bot.teamName}</div>
+        <div class="members">${bot.members}</div>
+        <div class="mvp-label">MVP</div>
+        <div class="mvp">${bot.mvp}</div>
+        ${buttonHTML}
+      `;
+      grid.appendChild(card);
+    });
+  })
+  .catch(err => {
+    document.getElementById('bot-grid').innerHTML =
+      '<div class="loading" style="color:#d33;">봇 정보 로드 실패: ' + err.message + '</div>';
+  });
+</script>
 
 </body>
 </html>

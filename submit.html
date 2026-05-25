@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내 봇 URL 등록하기 — 2026 BizModel Bots</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+    background: #faf8f5;
+    color: #1a1a1a;
+    line-height: 1.75;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2rem; margin-bottom: 10px; }
+  .hero p { opacity: 0.9; }
+  .hero a { color: #d4a574; text-decoration: none; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+  .card-box {
+    background: white;
+    border-radius: 16px;
+    padding: 40px 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    margin-bottom: 28px;
+  }
+  h2 {
+    color: #1a365d;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #d4a574;
+  }
+  h3 {
+    color: #2d5a87;
+    font-size: 1.15rem;
+    margin-top: 24px;
+    margin-bottom: 10px;
+  }
+  p { margin-bottom: 12px; }
+  ol, ul { padding-left: 24px; margin-bottom: 16px; }
+  li { margin-bottom: 6px; }
+
+  pre {
+    background: #1e293b;
+    color: #f1f5f9;
+    padding: 16px 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 12px 0;
+    font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  code {
+    background: #f5f0e6;
+    color: #1a365d;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 0.88em;
+  }
+  pre code { background: none; color: inherit; padding: 0; }
+
+  .tip {
+    background: #e8f4f8;
+    border-left: 4px solid #2196f3;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+  .warn {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 14px 18px;
+    border-radius: 6px;
+    margin: 16px 0;
+  }
+
+  .step {
+    background: #f5f0e6;
+    padding: 8px 14px;
+    border-radius: 20px;
+    display: inline-block;
+    color: #8b5e2a;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem; }
+  th, td { padding: 8px 12px; border: 1px solid #e0e0e0; text-align: left; }
+  th { background: #f5f0e6; color: #1a365d; }
+
+  .big-btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #1a365d;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 8px 4px;
+  }
+  .big-btn.gold { background: #d4a574; }
+
+  footer {
+    background: #1a365d;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9rem;
+  }
+  footer a { color: #d4a574; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>📝 내 봇 URL 등록하기</h1>
+  <p>Vercel에 배포한 봇 링크를 카드에 표시하는 방법</p>
+  <p style="margin-top:10px; font-size:0.9rem;"><a href="index.html">← 메인으로</a></p>
+</div>
+
+<div class="container">
+
+  <div class="card-box">
+    <h2>🎯 무엇을 하나요?</h2>
+    <p>본인 봇을 Vercel에 배포했으면, 그 URL을 <code>bots.json</code> 파일에 등록하세요.</p>
+    <p>등록되면 메인 페이지 카드에 <strong>"🔗 체험하기" 버튼</strong>이 활성화됩니다.</p>
+  </div>
+
+  <div class="card-box">
+    <h2>방법 ① — GitHub 웹 에디터 (가장 쉬움) ⭐</h2>
+    <p>설치 / 클론 / 명령어 X. GitHub 웹사이트에서 직접 수정합니다.</p>
+
+    <div class="step">STEP 1</div>
+    <p>GitHub 로그인 후 <code>bots.json</code> 파일 열기:</p>
+    <p>
+      <a class="big-btn" href="https://github.com/sdkparkforbi/bizmodel-bots-2026/blob/main/bots.json" target="_blank">
+        📂 bots.json 열기
+      </a>
+    </p>
+
+    <div class="step">STEP 2</div>
+    <p>우측 상단 <strong>연필 아이콘 (✏️)</strong> 클릭 → "Edit this file"</p>
+
+    <div class="step">STEP 3</div>
+    <p>본인 팀 번호를 찾아 <code>"webAppUrl": ""</code> 부분을 본인 Vercel URL로 교체:</p>
+    <pre><code>{
+  "teamNum": "01",
+  "botName": "식구",
+  ...
+  "webAppUrl": ""  ← 여기를 본인 URL로
+}</code></pre>
+    <p>↓ 변경 후</p>
+    <pre><code>{
+  "teamNum": "01",
+  "botName": "식구",
+  ...
+  "webAppUrl": "https://my-sikgu-bot.vercel.app"
+}</code></pre>
+
+    <div class="warn">
+      <strong>⚠️ 주의사항</strong>
+      <ul style="margin-top:6px;">
+        <li>다른 팀 정보는 절대 건드리지 마세요</li>
+        <li>큰따옴표 <code>"</code> 빠뜨리면 안 됨</li>
+        <li>URL 끝에 <code>/</code> 있어도 OK</li>
+      </ul>
+    </div>
+
+    <div class="step">STEP 4</div>
+    <p>화면 하단 <strong>"Commit changes..."</strong> 버튼 클릭</p>
+    <ul>
+      <li>커밋 메시지 예: <code>Add webApp URL for team 01 (식구)</code></li>
+      <li><strong>collaborator라면</strong>: "Commit directly to main" 선택 → 바로 반영</li>
+      <li><strong>아니면</strong>: 자동으로 PR(Pull Request) 만들어짐 → 교수님이 승인 후 반영</li>
+    </ul>
+
+    <div class="step">STEP 5</div>
+    <p>1~2분 후 메인 페이지 새로고침:</p>
+    <p>
+      <a class="big-btn gold" href="index.html">🏠 메인 페이지 확인</a>
+    </p>
+  </div>
+
+  <div class="card-box">
+    <h2>방법 ② — Git CLI (개발자용)</h2>
+    <p>이미 레포를 클론했거나 git 명령어가 익숙한 경우.</p>
+    <pre><code>git clone https://github.com/sdkparkforbi/bizmodel-bots-2026.git
+cd bizmodel-bots-2026
+# VS Code 등으로 bots.json 편집
+git add bots.json
+git commit -m "Add webApp URL for team 01"
+git push</code></pre>
+  </div>
+
+  <div class="card-box">
+    <h2>방법 ③ — 교수님께 카톡 전송 (가장 빠름)</h2>
+    <p>GitHub 없이 그냥 본인 URL을 카톡으로 보내면 교수님이 등록.</p>
+    <pre><code>안녕하세요!
+TEAM 01 식구 (김수연) URL입니다.
+https://my-sikgu-bot.vercel.app</code></pre>
+    <div class="tip">
+      <strong>💡 추천</strong>
+      개발 공부 측면에서는 방법 ① (GitHub 웹 에디터) 시도해보는 걸 권장합니다.
+      나중에 본인 봇 수정/배포에 익숙해질 수 있어요.
+    </div>
+  </div>
+
+  <div class="card-box">
+    <h2>📋 팀별 번호 빠른 확인</h2>
+    <table>
+      <tr><th>팀</th><th>봇</th><th>학생</th></tr>
+      <tr><td>01</td><td>식구</td><td>김수연</td></tr>
+      <tr><td>02</td><td>택씨</td><td>최문혁</td></tr>
+      <tr><td>03</td><td>분개해</td><td>21학번 F5 (5명)</td></tr>
+      <tr><td>04</td><td>잠깐만</td><td>김리원</td></tr>
+      <tr><td>05</td><td>장보고</td><td>김영연</td></tr>
+      <tr><td>06</td><td>그릭</td><td>에브리옵션 (4명)</td></tr>
+      <tr><td>07</td><td>나달</td><td>박시영</td></tr>
+      <tr><td>08</td><td>핀포커</td><td>송승원·최진규</td></tr>
+      <tr><td>09</td><td>지키미</td><td>첫 단추 (4명)</td></tr>
+      <tr><td>10</td><td>숨돌이</td><td>싹쓰리 (3명)</td></tr>
+      <tr><td>11</td><td>곳간이</td><td>섭섭헌 진우 (5명)</td></tr>
+      <tr><td>12</td><td>출조각</td><td>이성채</td></tr>
+      <tr><td>13</td><td>새로미</td><td>임예영</td></tr>
+      <tr><td>14</td><td>상도</td><td>지소윤</td></tr>
+      <tr><td>15</td><td>토닥이</td><td>권서영</td></tr>
+      <tr><td>16</td><td>하루</td><td>김하은</td></tr>
+    </table>
+  </div>
+
+  <div class="card-box">
+    <h2>🆘 문제가 생기면</h2>
+    <ul>
+      <li><strong>"체험하기" 버튼이 안 보임</strong> → 브라우저 새로고침 (Ctrl+F5)</li>
+      <li><strong>JSON 문법 에러</strong> → <a href="https://jsonlint.com" target="_blank">jsonlint.com</a>에서 검증 후 다시 커밋</li>
+      <li><strong>PR 승인 대기 중</strong> → 교수님께 카톡으로 알림</li>
+      <li><strong>URL이 작동 안 함</strong> → Vercel 대시보드에서 배포 상태 확인</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  <p>2026 비즈니스모델개발 경진대회</p>
+  <p><a href="index.html">메인</a> · <a href="proposals.html">제안서 요약</a> · <a href="tutorial.html">자습서</a></p>
+</footer>
+
+</body>
+</html>

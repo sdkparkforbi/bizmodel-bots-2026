@@ -1,0 +1,146 @@
+[
+  {
+    "teamNum": "01",
+    "botName": "식구",
+    "emoji": "🍚",
+    "teamName": "1인 가구 식사 동반 봇",
+    "members": "<strong>김수연</strong> (헬스케어융합학부 3)",
+    "mvp": "웹 아바타 · 음식 사진 → AI 영양 분석 + 짧은 식사 대화 (혼밥 정서 케어)",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "02",
+    "botName": "택씨",
+    "emoji": "🚕",
+    "teamName": "세무 도우미 봇",
+    "members": "<strong>최문혁</strong> (데이터경영 4)",
+    "mvp": "카드내역 CSV 업로드 → LLM이 경비 자동 분류 + 예상 환급액 + 세법 Q&A",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "03",
+    "botName": "분개해",
+    "emoji": "📊",
+    "teamName": "회계 학습 친구 봇",
+    "members": "<strong>21학번 F5</strong><br>신세용 · 길민제 · 김지한 · 임현우 · 허교정",
+    "mvp": "회계원리 문제 입력 → 분개 풀이 + 단계별 설명 + 비슷한 문제 추천",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "04",
+    "botName": "잠깐만",
+    "emoji": "⚠️",
+    "teamName": "보이스피싱 방어 가족 봇",
+    "members": "<strong>김리원</strong> (경영학 4)",
+    "mvp": "의심 문자/통화 캡처 → AI 사기 패턴 판별 + 가족(자녀)에게 자동 알림",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "05",
+    "botName": "장보고",
+    "emoji": "⛵",
+    "teamName": "매일 종목 보고 친구 봇",
+    "members": "<strong>김영연</strong> (AI 의료데이터학과 4)",
+    "mvp": "관심 종목 등록 → 매일 아침 8시 자동 푸시 (3줄 뉴스 요약) + 매매 직전 코칭",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "06",
+    "botName": "그릭",
+    "emoji": "Δ",
+    "teamName": "옵션 학습 코치 봇",
+    "members": "<strong>에브리옵션</strong><br>김영민 · 김윤호 · 이서희 · 홍성혁",
+    "mvp": "옵션 그리스 문자(델타/감마/세타) 개념 Q&A + 의무교육 시험 기출 풀이",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "07",
+    "botName": "나달",
+    "emoji": "🎾",
+    "teamName": "1인 매치 자취 코치 봇",
+    "members": "<strong>박시영</strong> (미래융합대학 바이오식의약/경영 3)",
+    "mvp": "자취 첫주 필수템 큐레이션 + 구독 다이어트 + 주 1회 자취 꿀팁 푸시 (\"오늘의 서브\")",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "08",
+    "botName": "핀포커 (포커)",
+    "emoji": "🎴",
+    "teamName": "종목 호재/악재 잠금화면 봇",
+    "members": "<strong>핀포커스</strong><br>송승원 · 최진규 (데이터경영 3)",
+    "mvp": "보유 종목 5개 등록 → DART/뉴스 5분 모니터링 → 호재/악재 발생 시 1초 푸시",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "09",
+    "botName": "지키미",
+    "emoji": "🛡️",
+    "teamName": "청년 대출 + 신용 코칭 봇",
+    "members": "<strong>첫 단추</strong><br>강유위 · 장서현 · 백두산 · 신우용",
+    "mvp": "청년 대출 정보 RAG 검색 + 신용 지키는 법 통계/연구 기반 코칭 (아바타)",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "10",
+    "botName": "숨돌이",
+    "emoji": "💨",
+    "teamName": "매매 직전 심리 친구 봇",
+    "members": "<strong>싹쓰리</strong><br>유혜린 · 황규민 · 김정민 (심리학)",
+    "mvp": "매매 직전 카톡 호출 → 감정 상태 묻기 → 24시간 챌린지 + 다음날 결과 알림",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "11",
+    "botName": "곳간이",
+    "emoji": "🌾",
+    "teamName": "현금 흐름 예측 + 환불 봇",
+    "members": "<strong>섭섭헌 진우</strong><br>임대섭 · 백진우 · 윤상헌 · 천우솔 · 김희서",
+    "mvp": "카드내역 CSV → 월말 예상 잔액 + 위험 알림 (D-7) + 환불 정책 자동 진단",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "12",
+    "botName": "출조각",
+    "emoji": "🎣",
+    "teamName": "낚시 출조 확률 예측 봇",
+    "members": "<strong>이성채</strong> (데이터경영 4)",
+    "mvp": "위치 + 어종 입력 → 해양 데이터 분석 → \"내일 갑오징어 출조각 87%\" 예측",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "13",
+    "botName": "새로미",
+    "emoji": "🌱",
+    "teamName": "알고리즘 탈출 발견 봇",
+    "members": "<strong>임예영</strong> (데이터경영 4)",
+    "mvp": "최근 본 콘텐츠 3개 입력 → AI가 의외의 새 취미 추천 + 원데이 클래스 링크",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "14",
+    "botName": "상도",
+    "emoji": "🏪",
+    "teamName": "B2B 영업 파트너 봇",
+    "members": "<strong>지소윤</strong> (데이터경영 4)",
+    "mvp": "영업 회사명 입력 → DART/뉴스 자동 요약 + 콜드콜 스크립트 + 거절 반박 논리",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "15",
+    "botName": "토닥이",
+    "emoji": "🤗",
+    "teamName": "감정 일기 + 위로 봇",
+    "members": "<strong>권서영</strong> (심리학과 3)",
+    "mvp": "매일 세줄 일기 입력 → 공감 1줄 + 응원 1줄 + 내일 작은 미션 제안",
+    "webAppUrl": ""
+  },
+  {
+    "teamNum": "16",
+    "botName": "하루",
+    "emoji": "🌿",
+    "teamName": "1인 가구 웰니스 코칭 봇",
+    "members": "<strong>김하은</strong> (미디어커뮤니케이션 4)",
+    "mvp": "주 1회 균형 체크인 (재무/건강/관계/자기시간) → 부족 영역 진단 + 작은 실천 1개",
+    "webAppUrl": ""
+  }
+]
