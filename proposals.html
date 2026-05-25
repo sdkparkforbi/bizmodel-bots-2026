@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학생 제안서 요약 — 2026 비즈니스모델개발 경진대회</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif;
+    background: #faf8f5;
+    color: #1a1a1a;
+    line-height: 1.7;
+  }
+  .hero {
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2rem; margin-bottom: 10px; }
+  .hero p { opacity: 0.9; }
+  .hero a { color: #d4a574; text-decoration: none; }
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+  .toc {
+    background: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  }
+  .toc h3 { color: #1a365d; margin-bottom: 16px; font-size: 1.1rem; }
+  .toc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 8px;
+  }
+  .toc a {
+    color: #2d5a87;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+  }
+  .toc a:hover { background: #e8f0f8; }
+
+  .team {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+    border-left: 5px solid #d4a574;
+    scroll-margin-top: 20px;
+  }
+  .team-head {
+    border-bottom: 2px solid #f0e8d8;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+  .team-num {
+    color: #d4a574;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .team-head h2 {
+    color: #1a365d;
+    font-size: 1.6rem;
+    margin-bottom: 6px;
+  }
+  .team-head .bot-name {
+    color: #2d5a87;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .team-head .members {
+    color: #666;
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+
+  .section {
+    margin-bottom: 18px;
+  }
+  .section h4 {
+    color: #1a365d;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section h4::before {
+    content: "▸";
+    color: #d4a574;
+  }
+  .section p, .section li {
+    color: #333;
+    font-size: 0.95rem;
+  }
+  .section ul { padding-left: 20px; }
+  .section li { margin-bottom: 4px; }
+
+  .bot-conversion {
+    background: #f5f0e6;
+    padding: 16px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    border-left: 3px solid #1a365d;
+  }
+  .bot-conversion .label {
+    color: #d4a574;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .bot-conversion .name {
+    color: #1a365d;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .bot-conversion .mvp {
+    color: #333;
+    font-size: 0.92rem;
+  }
+
+  footer {
+    background: #1a365d;
+    color: #ccc;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+  }
+  footer a { color: #d4a574; text-decoration: none; }
+
+  .back-link {
+    display: inline-block;
+    margin: 20px auto;
+    padding: 8px 16px;
+    background: #d4a574;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>📜 학생 제안서 요약</h1>
+  <p>2026 비즈니스모델개발 경진대회 — 16팀 원본 제안서</p>
+  <p style="margin-top:10px; font-size:0.9rem;"><a href="index.html">← 메인으로</a></p>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>📋 16팀 빠른 이동</h3>
+    <div class="toc-grid">
+      <a href="#team-01">01. 식구 (김수연)</a>
+      <a href="#team-02">02. 택씨 (최문혁)</a>
+      <a href="#team-03">03. 분개해 (F5)</a>
+      <a href="#team-04">04. 잠깐만 (김리원)</a>
+      <a href="#team-05">05. 장보고 (김영연)</a>
+      <a href="#team-06">06. 그릭 (에브리옵션)</a>
+      <a href="#team-07">07. 나달 (박시영)</a>
+      <a href="#team-08">08. 핀포커 (송승원·최진규)</a>
+      <a href="#team-09">09. 지키미 (첫 단추)</a>
+      <a href="#team-10">10. 숨돌이 (싹쓰리)</a>
+      <a href="#team-11">11. 곳간이 (섭섭헌 진우)</a>
+      <a href="#team-12">12. 출조각 (이성채)</a>
+      <a href="#team-13">13. 새로미 (임예영)</a>
+      <a href="#team-14">14. 상도 (지소윤)</a>
+      <a href="#team-15">15. 토닥이 (권서영)</a>
+      <a href="#team-16">16. 하루 (김하은)</a>
+    </div>
+  </div>
+
+  <!-- TEAM 01 -->
+  <div class="team" id="team-01">
+    <div class="team-head">
+      <div class="team-num">TEAM 01</div>
+      <h2>🍚 1인 가구·혼밥족 AI 맞춤 음식 추천 + 할인 연계 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 식구</div>
+      <div class="members">김수연 (헬스케어융합학부 3학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>1인 가구·혼밥족의 취향·예산·위치·건강 상태를 반영한 AI 맞춤형 음식 추천과 음식점 할인 혜택을 연결하는 플랫폼.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>1인 가구 증가 및 혼밥 문화 확산 현황 조사</li>
+        <li>혼밥족의 음식 소비 패턴 및 이용 니즈 분석</li>
+        <li>배달앱 및 음식 추천 플랫폼 사례 비교 분석</li>
+        <li>AI 활용 개인 맞춤 추천 차별성 (취향·예산·위치·건강 반영)</li>
+        <li>광고/음식점 제휴 기반 수익모델 설계 및 시장성 검토</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">식구 (食口)</div>
+      <div class="mvp">음식 사진 → AI 영양 분석 + 짧은 식사 동반 대화. 혼밥의 정서를 케어하는 식사 친구 아바타.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 02 -->
+  <div class="team" id="team-02">
+    <div class="team-head">
+      <div class="team-num">TEAM 02</div>
+      <h2>🚕 소상공인·프리랜서를 위한 지능형 세무·재무 자동화 SaaS</h2>
+      <div class="bot-name">→ 봇 이름: 택씨 / 팀명: 세무AI</div>
+      <div class="members">최문혁 (데이터경영 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>"세무사보다 빠르고, 엑셀보다 정확하며, 기장료보다 저렴한 재무 비서". 홈택스/카드사 연동을 통한 자동 전표 생성과 AI 분류, 절세 자동 추천.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획 (5단계)</h4>
+      <ul>
+        <li>Step 1: 시장 환경 및 페인 포인트 분석 (법적 환경, 타겟 인터뷰, 벤치마킹)</li>
+        <li>Step 2: 핵심 기술 및 비즈니스 메커니즘 설계 (데이터 파이프라인, AI 분류, 절세 알고리즘)</li>
+        <li>Step 3: BMC 고도화 (가치 제안, 수익 모델, 핵심 파트너)</li>
+        <li>Step 4: 경제성 및 시장 규모 (TAM-SAM-SOM)</li>
+        <li>Step 5: 리스크 관리 및 향후 로드맵 (세무사법 회피, 데이터 보안)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">택씨</div>
+      <div class="mvp">카드내역 CSV → LLM이 경비 자동 분류 + 예상 환급액 + 세법 Q&A. 라이더/크리에이터 등 1인 사업자 타겟.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 03 -->
+  <div class="team" id="team-03">
+    <div class="team-head">
+      <div class="team-num">TEAM 03</div>
+      <h2>📊 AI 회계/세법 튜터링 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 분개해 / 팀명: 21학번 F5</div>
+      <div class="members">신세용 · 길민제 · 김지한 · 임현우 · 허교정 (데이터경영 3~4학년) · 5인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>회계학 대학생의 학점 관리 + 전문직 수험생의 시험 합격 양쪽을 모두 도와주는 AI 가정교사. 회계와 세무 과목 간 연계성을 지식 그래프로 매핑.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>타겟 사용자 개인 패턴 분석 (대학생 vs 수험생)</li>
+        <li>지식 그래프 기반 AI 학습 데이터 설계 (회계 기준서 + 세법 조문 매핑)</li>
+        <li>단계별 문제 풀이 로직 (T-계정 시각화, 실수 단계 진단)</li>
+        <li>대학 강의 및 시험 일정 연계성 분석</li>
+        <li>개인화된 학습 성취도 기획 (오답 패턴 분석)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">분개해</div>
+      <div class="mvp">회계원리 문제 입력 → 분개 풀이 + 단계별 설명 + 비슷한 문제 추천. "분개해줘"의 이중 의미(회계 분개 + 분해 설명).</div>
+    </div>
+  </div>
+
+  <!-- TEAM 04 -->
+  <div class="team" id="team-04">
+    <div class="team-head">
+      <div class="team-num">TEAM 04</div>
+      <h2>⚠️ AI 기반 금융사기 예방 및 이상거래 탐지 시스템</h2>
+      <div class="bot-name">→ 봇 이름: 잠깐만</div>
+      <div class="members">김리원 (경영학 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>거래·통화·디바이스 데이터를 다차원 분석하여 보이스피싱 등 디지털 금융사기를 실시간 차단. 고령층 특화 보호 모드 + 가족 알림 기능.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>제안 배경 (보이스피싱 피해 연 수천억, 60대 이상 피해 집중)</li>
+        <li>비즈니스 모델 개요 (B2B — 저축은행, 카드사, 핀테크)</li>
+        <li>주요 기능 (실시간 탐지, 위험 알림, 고령층 보호, AI OCR)</li>
+        <li>기대 효과 (사기 예방, 고령층 안전, 보안 격차 해소)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">잠깐만</div>
+      <div class="mvp">B2C 피벗 — 부모님이 의심 문자/통화 캡처 → AI 판별 → 자녀에게 자동 알림. KISA "잠깐, 멈추세요" 캠페인 슬로건 흡수.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 05 -->
+  <div class="team" id="team-05">
+    <div class="team-head">
+      <div class="team-num">TEAM 05</div>
+      <h2>⛵ AI 기반 자동 투자 보조 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 장보고 / 팀명: 주식또봇</div>
+      <div class="members">김영연 (AI 의료데이터학과 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>시간 부족 직장인 대상 AI 기반 자동 투자 보조. 실시간 시장 데이터·뉴스·주가 분석으로 맞춤형 투자 전략 제공.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>주요 고객층 분석 (직장인, 투자 초보자)</li>
+        <li>핵심 가치 제안 (감정적 투자 최소화, 맞춤 전략)</li>
+        <li>AI 활용 방식 (뉴스 분석, 주가 학습, 성향 분석, 포트폴리오 조정)</li>
+        <li>수익모델 (무료 + 프리미엄 구독)</li>
+        <li>경쟁우위 + 성장 가능성</li>
+        <li>위험요소 (AI 예측 실패, 금융 규제, 투자 손실 책임)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">장보고 (신라 해상왕)</div>
+      <div class="mvp">자본시장법 회피 피벗 — 자동매매 X, 정보 큐레이션 O. 관심 종목 등록 → 매일 아침 3줄 뉴스 요약 푸시 + 매매 직전 코칭.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 06 -->
+  <div class="team" id="team-06">
+    <div class="team-head">
+      <div class="team-num">TEAM 06</div>
+      <h2>Δ 안전하고 강력한 옵션 거래 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 그릭 / 팀명: 에브리옵션</div>
+      <div class="members">김영민 · 김윤호 · 이서희 · 홍성혁 (데이터경영 3~4학년) · 4인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>"가장 안전하고 강력한 옵션 거래소". 150% 증거금 + 마진콜 대납 + 의무교육 통합 온보딩 + 원클릭 전략 큐레이션.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>비즈니스 모델 개요 (테슬라/엔비디아 등 고변동성 종목 옵션)</li>
+        <li>주요 기능 (심리기반 마케팅, 의무교육 온보딩, 원클릭 전략)</li>
+        <li>리스크 관리 (세이프티 가드 150% 증거금, 마진콜 대납)</li>
+        <li>수익 모델 (거래 수수료 + 신용 + Float 운용)</li>
+        <li>맥킨지 7S 기반 조직 실행 전략</li>
+        <li>엑시트 전략 (대형 증권사 매각)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">그릭 (옵션 그리스 문자)</div>
+      <div class="mvp">거래소 인가 불가 → 옵션 교육 코치로 피벗. 옵션 그리스 문자 Q&A + 의무교육 시험 기출 풀이 + 모의 거래 시뮬레이션.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 07 -->
+  <div class="team" id="team-07">
+    <div class="team-head">
+      <div class="team-num">TEAM 07</div>
+      <h2>🎾 유독 대한민국에만 구독서비스가 많은 이유</h2>
+      <div class="bot-name">→ 봇 이름: 나달 / 팀명: 나혼자 달린다</div>
+      <div class="members">박시영 (미래융합대학 바이오식의약학+경영학 3학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>OTT·배달·커머스·카페·식품 등 한국에서 구독경제가 유독 활성화된 이유를 분석하고, 이를 기반으로 지속 가능한 신규 구독 비즈니스 모델 방향 도출.</p>
+    </div>
+
+    <div class="section">
+      <h4>4가지 연구 질문 (RQ)</h4>
+      <ul>
+        <li>RQ1: 왜 한국 소비자는 구독 서비스에 높은 수용성을 보이는가?</li>
+        <li>RQ2: 한국 시장 환경은 왜 구독 모델에 유리한가?</li>
+        <li>RQ3: 구독 피로감에도 살아남는 서비스의 공통점은?</li>
+        <li>RQ4: 향후 성장 가능한 한국형 구독 비즈니스는?</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">나달 (나혼자 달린다 + 테니스 라파엘 나달)</div>
+      <div class="mvp">1인 매치 자취 코치 — 자취 첫주 필수템 + 구독 다이어트 + 주 1회 자취 꿀팁 푸시 ("오늘의 서브"). Vamos!</div>
+    </div>
+  </div>
+
+  <!-- TEAM 08 -->
+  <div class="team" id="team-08">
+    <div class="team-head">
+      <div class="team-num">TEAM 08</div>
+      <h2>🎴 초개인화 AI 주식 정보 큐레이션 및 실시간 모멘텀 알림 서비스</h2>
+      <div class="bot-name">→ 봇 이름: 핀포커 (포커) / 팀명: 핀포커스</div>
+      <div class="members">송승원 · 최진규 (데이터경영 3학년) · 2인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>HTS/MTS 상시 모니터링 불가능한 직장인·대학생 투자자를 위해, AI가 관심 기업 뉴스를 분석하고 호재/악재 큐레이션 + 실시간 모멘텀 알림 제공.</p>
+    </div>
+
+    <div class="section">
+      <h4>핵심 기능</h4>
+      <ul>
+        <li>초개인화 온보딩 (성향 + 관심 기업 설정)</li>
+        <li>AI 센티멘털 필터링 홈 피드 (DART + 뉴스 → 호재/악재 1줄 요약)</li>
+        <li>데일리 브리핑 (관심 섹터 모멘텀 푸시)</li>
+        <li>실시간 모멘텀 알림 (잠금화면 즉시 확인)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>수익 모델</h4>
+      <p>월 2,990원 B2C SaaS 구독 (커피 반 잔 값 — 심리적 저항선 ↓). 단기 투자 성공 1회로 구독료 회수 ROI.</p>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">핀포커 (호출: "포커야")</div>
+      <div class="mvp">보유 종목 5개 등록 → DART/뉴스 5분 단위 모니터링 → 호재/악재 발생 시 잠금화면 1초 푸시.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 09 -->
+  <div class="team" id="team-09">
+    <div class="team-head">
+      <div class="team-num">TEAM 09</div>
+      <h2>🛡️ 신용점수 없는 청년층 위한 대안 신용평가 대출</h2>
+      <div class="bot-name">→ 봇 이름: 지키미 / 팀명: 첫 단추</div>
+      <div class="members">강유위 · 장서현 · 백두산 · 신우용 (데이터경영 3~4학년) · 4인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>금융 거래 이력 부족으로 저신용자로 분류되는 청년층을 위한 대안 신용평가. 통신비·납부이력·소비패턴·SNS 등 비금융 데이터로 신용 평가 + 중금리(6~15%) 대출.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획 (6단계)</h4>
+      <ul>
+        <li>1단계: 문제 정의 (청년 금융 소외 통계)</li>
+        <li>2단계: 시장 분석 (TAM-SAM-SOM, 경쟁사 비교)</li>
+        <li>3단계: 비즈니스 모델 설계 (예대마진 + B2B API + 프리미엄)</li>
+        <li>4단계: BMC 작성 (9블록)</li>
+        <li>5단계: 리스크 및 한계 (규제, AI 윤리, 대손율)</li>
+        <li>6단계: 결론 및 기대효과 (사회적 가치 + 수익성)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">지키미</div>
+      <div class="mvp">은행 인가 불가 → 정보/코칭으로 피벗. 청년 대출 정보 RAG (정부/공공/은행 청년 상품) + 신용 지키는 법 통계/연구 기반 코칭. 아바타가 동행.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 10 -->
+  <div class="team" id="team-10">
+    <div class="team-head">
+      <div class="team-num">TEAM 10</div>
+      <h2>💨 주식창만 보면 흔들리는 당신을 위한 AI 안전벨트 (마인드 가드)</h2>
+      <div class="bot-name">→ 봇 이름: 숨돌이 / 팀명: 싹쓰리</div>
+      <div class="members">유혜린 (경영 3) · 황규민 (경영 4) · <strong>김정민 (심리학 4)</strong> · 3인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>'공포'와 '탐욕'이라는 본능적 오류를 데이터로 교정하여 비이성적 뇌동매매를 원천 차단. 심리적 메타인지를 통한 '계좌 안전벨트' 역할. <strong>16팀 중 유일하게 심리학 전공자 합류.</strong></p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>사용자 데이터 입력 + 심리 상태 슬라이더 (편안함~극도의 불안)</li>
+        <li>다차원 대조 분석 (수익률 vs 시장 vs 업종, 감정 vs 객관)</li>
+        <li>맞춤형 행동 처방 (뇌동매매 경고, 앱 종료 권유)</li>
+        <li><strong>MVP 전략 (Mock Data로 로직 검증 → API 연동 고도화)</strong></li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">숨돌이</div>
+      <div class="mvp">매매 직전 카톡 호출 → 감정 상태 묻기 → 24시간 챌린지 → 다음날 결과 알림. "ㅋㅋ 화났구나" 친구 톤.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 11 -->
+  <div class="team" id="team-11">
+    <div class="team-head">
+      <div class="team-num">TEAM 11</div>
+      <h2>🌾 사용자 소비 패턴·구독·결제 학습 AI 분신</h2>
+      <div class="bot-name">→ 봇 이름: 곳간이 / 팀명: 섭섭헌 진우</div>
+      <div class="members">임대섭 · 백진우 · 윤상헌 · 천우솔 · 김희서 (데이터경영 + 미디어커뮤니케이션경영 3) · 5인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>"일반 가계부 앱은 '얼마를 썼는지'를 보여준다. 우리는 '어디서 돈이 새고 있는지, 지금 무엇을 해야 하는지'를 제안한다." <strong>분석에서 행동(환불·협상)까지.</strong></p>
+    </div>
+
+    <div class="section">
+      <h4>4가지 분석 목적</h4>
+      <ul>
+        <li>소비 낭비 탐지 (안 쓰는 구독, 반복 결제, 충동구매)</li>
+        <li>가격 비효율 탐지 (평균보다 비싸게 구매했는지)</li>
+        <li>환불·교환 가능성 판단 (구매일, 정책, 사용 여부)</li>
+        <li>협상 가능성 판단 (요금 인하, 혜택 요청)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>처리 흐름 (8단계)</h4>
+      <p>데이터 수집 → 정제 → 패턴 분석 → 낭비 점수 → 환불/협상 분석 → AI 분신 리포트 → 사용자 실행 제안 → 피드백 반영</p>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">곳간이</div>
+      <div class="mvp">카드내역 → 월말 예상 잔액 + 위험 알림 (D-7) + 환불 정책 자동 진단. "가계부가 보여주는 어제, 곳간이가 알려주는 내일".</div>
+    </div>
+  </div>
+
+  <!-- TEAM 12 -->
+  <div class="team" id="team-12">
+    <div class="team-head">
+      <div class="team-num">TEAM 12</div>
+      <h2>🎣 AI + 선상 낚시 + 온라인 쇼핑몰</h2>
+      <div class="bot-name">→ 봇 이름: 출조각 / 팀명: AI바다</div>
+      <div class="members">이성채 (데이터경영 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>낚시 전문가가 엄선한 '0.5일 배송' 수산물 + AI 기반 선상 레저 서비스 결합. <strong>본인 운영 사업의 디지털 전환 톤.</strong></p>
+    </div>
+
+    <div class="section">
+      <h4>사업 부문별 전략</h4>
+      <ul>
+        <li>선상 낚시: AI 해황/조과 예측, 어종별 최적 포인트 히트맵, 조황 빅데이터 커머스 연동</li>
+        <li>온라인 쇼핑몰: 새벽 경매 소싱, 수요 기반 당일 배송, AI 자동 상세페이지</li>
+        <li>AI 결합: 매입 물량 예측, 크로스 셀링, 챗봇 응대</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>수익 구조</h4>
+      <p>승선료 + 수산물 마진 + 멤버십 구독 + 낚시 장비 판매. "배를 직접 타는 사람이 고른 생선은 다르다" 퍼스널 브랜딩.</p>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">출조각 (낚시인 슬랭 — "내일 출조각이야!")</div>
+      <div class="mvp">위치 + 어종 입력 → 해양 데이터(국립해양조사원) 분석 → "내일 갑오징어 출조각 87%" 예측.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 13 -->
+  <div class="team" id="team-13">
+    <div class="team-head">
+      <div class="team-num">TEAM 13</div>
+      <h2>🌱 AI 기반 취향 확장 추천 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 새로미 / 팀명: 알고리즘 탈출 연구소</div>
+      <div class="members">임예영 (데이터경영 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>기존 SNS 알고리즘의 반복 추천 문제(필터 버블)를 해결하고, 사용자가 새로운 관심사와 취미를 발견할 수 있도록 돕는 AI 추천 서비스.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>문제 정의 (유튜브/인스타/틱톡 알고리즘 피로감)</li>
+        <li>서비스 개요 (시청 기록·좋아요·저장 분석 → 새 분야 추천)</li>
+        <li>AI 활용 (콘텐츠 소비 패턴, 관심사 연결성, 취향 형성 예측)</li>
+        <li>기대 효과 (알고리즘 피로감 감소, 새 취미 발견)</li>
+        <li>수익 모델 (프리미엄 구독 + 원데이 클래스 제휴 + 브랜드 광고)</li>
+        <li>확장 방향 (여행/취미/자기계발/쇼핑)</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">새로미</div>
+      <div class="mvp">최근 본 콘텐츠 3개 입력 → LLM이 의외의 새 취미 추천 + 원데이 클래스 링크. <strong>70년 학술 이론 + 연구가설 통합 (임상 연구 잠재력).</strong></div>
+    </div>
+  </div>
+
+  <!-- TEAM 14 -->
+  <div class="team" id="team-14">
+    <div class="team-head">
+      <div class="team-num">TEAM 14</div>
+      <h2>🏪 데이터로 세일즈 현직자들의 심리적 허들을 허물고 실적을 자동화</h2>
+      <div class="bot-name">→ 봇 이름: 상도 / 팀명: 세일즈더베럴</div>
+      <div class="members">지소윤 (데이터경영 4학년) · 1인 팀 (영업 경험 보유)</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>"영업자 곁에서 24시간 상주하는 전략적 영업 파트너". B2B SaaS — 한국형 Gong/Outreach.</p>
+    </div>
+
+    <div class="section">
+      <h4>3단계 솔루션</h4>
+      <ul>
+        <li>Step 1: 스마트 타겟팅 (산업군별 유망 고객사 + 최적 영업 소스)</li>
+        <li>Step 2: 맞춤형 시나리오 엔진 (예상 거절 사유 → 데이터 기반 반박 논리)</li>
+        <li>Step 3: 세일즈 오토메이션 (미팅 녹취 → 5분 내 제안서 PDF + CRM 연동)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>차별화 (본인 경험 기반)</h4>
+      <p>실제 영업 프로젝트에서 본인이 직접 겪은 '타겟별 거절 사유 데이터' + '설득 성공 멘트'를 초기 Seed Data로 투입하여 현장감 확보.</p>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">상도 (조선 거상 임상옥)</div>
+      <div class="mvp">영업 회사명 입력 → DART/뉴스 자동 요약 + 콜드콜 스크립트 + 거절 반박 논리 생성. "사람을 남기는 장사" 철학.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 15 -->
+  <div class="team" id="team-15">
+    <div class="team-head">
+      <div class="team-num">TEAM 15</div>
+      <h2>🤗 내 손안에 상담소 (AI 활용 상담 어플리케이션 개발)</h2>
+      <div class="bot-name">→ 봇 이름: 토닥이</div>
+      <div class="members">권서영 (심리학과 3학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>시간과 사회적 시선 때문에 전문 대면 상담을 못 받는 대학생/청소년을 위한 개인 맞춤 AI 상담. 오늘의 기분 + 세줄 일기 + 챗봇 대화로 감정 분석 + 공감 피드백.</p>
+    </div>
+
+    <div class="section">
+      <h4>분석 계획</h4>
+      <ul>
+        <li>청소년/대학생 정신건강 설문 (수요 파악)</li>
+        <li>감정 기록·챗봇·대화 코칭 사용자 만족도 분석</li>
+        <li>심리학적 이론 서비스 적용</li>
+        <li>차별화: '라포(Rapport) 형성' — 귀여운 캐릭터형 AI로 친근감 + 누적 데이터 기반 이해</li>
+      </ul>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">토닥이 (위로 의성어 "토닥토닥")</div>
+      <div class="mvp">매일 세줄 일기 입력 → 공감 1줄 + 응원 1줄 + 내일 작은 미션. 의료/상담 영역 회피, "일기 + 토닥" 컨셉으로 법적 리스크 ↓.</div>
+    </div>
+  </div>
+
+  <!-- TEAM 16 -->
+  <div class="team" id="team-16">
+    <div class="team-head">
+      <div class="team-num">TEAM 16</div>
+      <h2>🌿 1인 가구 라이프스타일 맞춤 생애주기 재무 로드맵 AI 플랫폼</h2>
+      <div class="bot-name">→ 봇 이름: 하루</div>
+      <div class="members">김하은 (미디어커뮤니케이션학 4학년) · 1인 팀</div>
+    </div>
+
+    <div class="section">
+      <h4>핵심 컨셉</h4>
+      <p>다인 가구 중심 금융 서비스에서 소외된 1인 가구(2025년 804만, 36.1%) 대상 소형 주거·반려동물·개인 미래 설계 등 1인 가구 라이프스타일에 맞춘 재무 로드맵.</p>
+    </div>
+
+    <div class="section">
+      <h4>3가지 로드맵</h4>
+      <ul>
+        <li>주거 로드맵 (오피스텔, 소형 아파트, 공공 1인 가구 주택, 전세 vs 자가 손익분기점)</li>
+        <li>노후 로드맵 (1인 국민연금 + 개인연금 + 요양/간병 비용 + 실버타운)</li>
+        <li>라이프스타일 로드맵 (반려동물 의료비, 여행/취미와 저축 균형)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>타겟 3그룹</h4>
+      <ul>
+        <li>비혼 지향 2030 청년</li>
+        <li>이혼/사별 4050 1인 가구</li>
+        <li>홀로 노후 준비 60대+</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h4>수익 모델</h4>
+      <p>금융 상품 중개 수수료 (펫보험, 연금보험, 청약 적금) + 프리미엄 구독 (시나리오 비교, 1:1 상담).</p>
+    </div>
+
+    <div class="bot-conversion">
+      <div class="label">→ 변환된 봇 + MVP</div>
+      <div class="name">하루 (웰니스 코칭 톤으로 피벗)</div>
+      <div class="mvp">"부자 되기"가 아닌 "혼자 잘 살기" 웰니스. 주 1회 균형 체크인 (재무/건강/관계/자기시간) → 부족 영역 진단 → 작은 실천 1개 제안.</div>
+    </div>
+  </div>
+
+  <p style="text-align:center; margin-top:40px;">
+    <a href="index.html" class="back-link">← 메인 페이지로 돌아가기</a>
+  </p>
+
+</div>
+
+<footer>
+  <p>2026 비즈니스모델개발 경진대회</p>
+  <p>데이터경영학과 &amp; 경영학전공</p>
+  <p style="margin-top:14px; opacity:0.7;">
+    <a href="https://github.com/sdkparkforbi/bizmodel-bots-2026">GitHub Repo</a>
+  </p>
+</footer>
+
+</body>
+</html>

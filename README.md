@@ -6,7 +6,7 @@
 
 > *"AI 도구가 아니라, 옆자리에 있어주는 AI 친구"*
 
-🔗 **[웹사이트 보기](https://sdkparkforbi.github.io/bizmodel-bots-2026/)**
+🔗 **[웹사이트 보기](https://sdkparkforbi.github.io/bizmodel-bots-2026/)** · 📜 **[학생 제안서 요약](https://sdkparkforbi.github.io/bizmodel-bots-2026/proposals.html)**
 
 ---
 
