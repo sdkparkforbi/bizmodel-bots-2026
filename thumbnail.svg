@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="100%" stop-color="#2d5a87"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d4a574"/>
+      <stop offset="100%" stop-color="#e8c896"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <text x="600" y="120" text-anchor="middle" font-size="32" fill="#d4a574" font-weight="300" letter-spacing="6">2026 BIZ MODEL BOT</text>
+
+  <text x="600" y="200" text-anchor="middle" font-size="58" fill="#ffffff" font-weight="700">16개의 AI 친구 봇</text>
+
+  <line x1="450" y1="240" x2="750" y2="240" stroke="url(#accent)" stroke-width="2"/>
+
+  <text x="600" y="285" text-anchor="middle" font-size="20" fill="#cccccc">비즈니스모델개발 경진대회 — 데이터경영학과 &amp; 경영학전공</text>
+
+  <g font-size="44" text-anchor="middle">
+    <text x="200" y="400" fill="#ffffff">🍚</text>
+    <text x="280" y="400" fill="#ffffff">🚕</text>
+    <text x="360" y="400" fill="#ffffff">📊</text>
+    <text x="440" y="400" fill="#ffffff">⚠️</text>
+    <text x="520" y="400" fill="#ffffff">⛵</text>
+    <text x="600" y="400" fill="#ffffff">Δ</text>
+    <text x="680" y="400" fill="#ffffff">🎾</text>
+    <text x="760" y="400" fill="#ffffff">🎴</text>
+
+    <text x="240" y="480" fill="#ffffff">🛡️</text>
+    <text x="320" y="480" fill="#ffffff">💨</text>
+    <text x="400" y="480" fill="#ffffff">🌾</text>
+    <text x="480" y="480" fill="#ffffff">🎣</text>
+    <text x="560" y="480" fill="#ffffff">🌱</text>
+    <text x="640" y="480" fill="#ffffff">🏪</text>
+    <text x="720" y="480" fill="#ffffff">🤗</text>
+    <text x="800" y="480" fill="#ffffff">🌿</text>
+  </g>
+
+  <text x="600" y="570" text-anchor="middle" font-size="18" fill="#d4a574" font-style="italic">"AI 도구가 아니라, 옆자리에 있어주는 AI 친구"</text>
+
+</svg>
