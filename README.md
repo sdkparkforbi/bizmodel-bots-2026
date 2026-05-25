@@ -43,17 +43,26 @@
 
 ---
 
-## 💡 공통 기술 스택
+## 💡 공통 기술 스택 (LiveAvatar 기반)
 
-모든 봇이 동일한 인프라:
-- **카카오톡 i 오픈빌더** (봇 UI)
-- **Python + FastAPI** (백엔드)
-- **Claude / GPT API** (LLM)
-- **ChromaDB** (벡터 DB)
+모든 봇이 동일한 인프라 — **3D 아바타 + 음성 대화 웹 앱**:
 
-→ **봇별 차이 = ① RAG 데이터 ② 페르소나 ③ 시스템 프롬프트 (3가지만)**
+| 영역 | 기술 |
+|---|---|
+| **프론트엔드** | React 19 + Vite 8 |
+| **3D 아바타** | Three.js + @pixiv/three-vrm (VRM 캐릭터) |
+| **실시간 음성/비디오** | LiveAvatar (LiveKit 기반) |
+| **LLM** | OpenAI API |
+| **RAG** | 벡터 DB (도메인별 지식) |
+| **호스팅** | Vercel |
+| **공유** | Kakao Developer SDK (링크/공유용) |
 
-운영비: 봇당 월 5만원 이하
+→ **봇별 차이 = ① RAG 데이터 ② VRM 아바타 캐릭터 ③ 시스템 프롬프트 (3가지만)**
+
+운영비: 봇당 월 5~10만원 (OpenAI + LiveKit 사용량)
+
+> 📌 참고 레포: [cha-interview-bot-liveavatar-my](https://github.com/sdkparkforbi/cha-interview-bot-liveavatar-my)
+> (차의과학대 신입생 전공 상담 챗봇 — LiveAvatar 마이그레이션 버전)
 
 ---
 
