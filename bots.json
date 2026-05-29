@@ -96,7 +96,7 @@
     "teamName": "현금 흐름 예측 + 환불 봇",
     "members": "<strong>섭섭헌 진우</strong><br>임대섭 · 백진우 · 윤상헌 · 천우솔 · 김희서",
     "mvp": "카드내역 CSV → 월말 예상 잔액 + 위험 알림 (D-7) + 환불 정책 자동 진단",
-    "webAppUrl": ""
+    "webAppUrl": "https://moneymind-ai-six.vercel.app/"
   },
   {
     "teamNum": "12",
