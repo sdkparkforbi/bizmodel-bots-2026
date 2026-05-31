@@ -24,7 +24,7 @@
     "teamName": "회계 학습 친구 봇",
     "members": "<strong>21학번 F5</strong><br>신세용 · 길민제 · 김지한 · 임현우 · 허교정",
     "mvp": "회계원리 문제 입력 → 분개 풀이 + 단계별 설명 + 비슷한 문제 추천",
-    "webAppUrl": ""
+    "webAppUrl": "https://my-bot-tawny-ten.vercel.app/"
   },
   {
     "teamNum": "04",
