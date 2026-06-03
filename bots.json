@@ -105,7 +105,7 @@
     "teamName": "낚시 출조 확률 예측 봇",
     "members": "<strong>이성채</strong> (데이터경영 4)",
     "mvp": "위치 + 어종 입력 → 해양 데이터 분석 → \"내일 갑오징어 출조각 87%\" 예측",
-    "webAppUrl": "https://chuljogak-bot.vercel.app/"
+    "webAppUrl": "https://chuljogak-bot-seven.vercel.app/"
   },
   {
     "teamNum": "13",
