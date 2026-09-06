@@ -6,7 +6,7 @@
     "teamName": "1인 가구 식사 동반 봇",
     "members": "<strong>김수연</strong> (헬스케어융합학부 3)",
     "mvp": "웹 아바타 · 음식 사진 → AI 영양 분석 + 짧은 식사 대화 (혼밥 정서 케어)",
-    "webAppUrl": ""
+    "webAppUrl": "https://sikgu-bot.vercel.app/"
   },
   {
     "teamNum": "02",
